@@ -1,14 +1,12 @@
+/* Universal Styling */
 * {
   box-sizing: border-box;
   padding: 10px;
   margin: 0;
 }
-/* Universal Styling */
+
 body {
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-  "Lucida Sans", Arial, sans-serif;
-  /* margin: 0; */
-  
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 main {
@@ -18,7 +16,6 @@ main {
 }
 
 /* Header and Navigational elements */
-
 header {
   display: flex;
   flex-wrap: wrap;
@@ -26,44 +23,30 @@ header {
   justify-content: space-between;
   background-color: darkslategray;
   min-width: max-content;
-
 }
 
 header h1 {
   font-size: 48px;
   background-color: aqua;
-
 }
 
-nav{
-
+nav, .topNav {
   display: flex;
   list-style-type: none;
-
-
 }
 
-nav a {
-
+nav a, .topNav a {
   color: var(--dark-blue);
   text-decoration: none;
   text-align: center;
 }
 
-nav a:hover {
+nav a:hover, .topNav a:hover {
   background-color: var(--white);
   color: var(--dark-blue);
 }
 
-.topNav {
-  display: flex;
-  list-style-type: none;
-}
-
-
-
 /* Hero Banner Styling */
-
 .hero-banner {
   background-image: url(/assets/images/02-hero-bg.jpg);
   background-position: center;
@@ -71,11 +54,9 @@ nav a:hover {
   height: 190px;
   position: relative;
   min-width: max-content;
-
 }
 
 .hero-banner h2 {
-
   font-size: 35px;
   padding: 0 10px;
   display: flex;
@@ -87,134 +68,39 @@ nav a:hover {
   text-decoration: brown;
 }
 
-
 /* Main Content */
-main {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 2%;
-
-}
-
-
-
-/* About Me Section Box Styling Start*/
-
-.container {
-
-  flex: 1 0 75%;
+.container, .workcontainer, .projects, .p0, .project-group, .contact-container {
+  flex: auto; 
   justify-content: space-between;
-  max-height: fit-content;
   display: flex;
-
 }
 
-.container h2 {
-
-display: flex;
-align-items: center;
-border-right-style: solid;
-border-width: 1px;
-border-color: aqua;
-justify-content: left;
-
-
-
-}
-
-
-/* About Me Section Box Styling End*/
-/* Work Section Styling */
-
-
-.workcontainer {
-
-  flex: 1 0 75%;
-  justify-content: space-between;
-  max-height: fit-content;
-  display: flex;
-
-
-}
-
-.workcontainer h2 {
-
+.container h2, .workcontainer h2, .contact-container h2 {
   display: flex;
   align-items: center;
   border-right-style: solid;
   border-width: 1px;
   border-color: aqua;
   justify-content: left;
-  flex-direction: column;
-  width: 100px;
-
-
-}
-
-.projects {
-
-  flex: 1 0 75%;
-  justify-content: space-between;
-
-}
-
-
-
- .p0 {
-
-  max-width: 75%;
-  display: flex;
-
-
-} 
-
-.project-group {
-
-  display: flex;
-  flex-direction: row;
-  max-width: 75%;
-
-}
-
-
-
-#projects .project-group figure {
+  width: 125px;
   
-    flex: 1 1 auto;  
-} 
+}
 
-#projects figure img {
+#projects figure img {    /*created to adjust main work pic*/
   display: block;
   width: 100%;
   height: auto;
 } 
 
-/* Work Section Styling End */
-/* Contact Styling Start */
+.project-group {       /*created to adjust secondary  work pic*/
 
-.contact-container {
-
-  
-  flex: 1 0 75%;
-  justify-content: space-between;
-  max-height: fit-content;
-  display: flex;
-}
-
-.contact-container h2 {
-
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-right-style: solid;
-  border-width: 1px;
-  border-color: aqua;
-  clear: both;
-
-  
+  width: 75%;
+  height: auto;
 
 }
+
+
+
 
 .bottomNav {
   flex: 1 0 75%;
@@ -224,54 +110,24 @@ justify-content: left;
   align-items: start;
 }
 
-
 .bottomNav a {
   text-decoration: none;
   color: #333; /* Adjust link color as needed */
   font-size: medium;
 }
 
-/* Contact Styling End */
 /* Footer Styling */
-
 .footer {
-
   font-size: xx-small;
   padding: 30px;
-    clear: both;
-    text-align: center;
-  
-
+  clear: both;
+  text-align: center;
 }
 
-
-
 /* Media screen styling */
-
 @media screen and (max-width: 780px) {
-  .topNav {
+  .topNav, .container, .projects, .project-group {
     flex-direction: column;
     align-items: flex-start;
   }
 }
-
-  @media screen and (max-width: 780) {
-    .container {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  @media screen and (max-width: 780) {
-    .projects {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
-
-  @media screen and (max-width: 780) {
-    .project-group {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  }
