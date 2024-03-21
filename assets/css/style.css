@@ -7,20 +7,26 @@
 body {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
   "Lucida Sans", Arial, sans-serif;
-  line-height: 1.5;
-  margin: 0;
+  /* margin: 0; */
+  
+}
+
+main {
   display: flex;
   flex-wrap: wrap;
-
+  margin-top: 2%;
 }
+
 /* Header and Navigational elements */
+
 header {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   background-color: darkslategray;
-  width: 100%;
+  min-width: max-content;
+
 }
 
 header h1 {
@@ -38,8 +44,8 @@ nav{
 }
 
 nav a {
+
   color: var(--dark-blue);
-  padding: 14px 20px;
   text-decoration: none;
   text-align: center;
 }
@@ -50,26 +56,26 @@ nav a:hover {
 }
 
 .topNav {
-  padding-top: 15px;
-  font-size: 24px red;
   display: flex;
-  flex: 34px;
   list-style-type: none;
-
-
 }
+
+
+
 /* Hero Banner Styling */
+
 .hero-banner {
   background-image: url(/assets/images/02-hero-bg.jpg);
-  width: 100%;
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
   height: 190px;
   position: relative;
+  min-width: max-content;
+
 }
 
 .hero-banner h2 {
+
   font-size: 35px;
   padding: 0 10px;
   display: flex;
@@ -78,80 +84,144 @@ nav a:hover {
   position: absolute;
   bottom: 20px;
   right: 5%;
-}
-/* Main Content */
-main {
-  display: inline-block;
-  flex-wrap: wrap;
+  text-decoration: brown;
 }
 
+
+/* Main Content */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 2%;
+
+}
+
+
+
+/* About Me Section Box Styling Start*/
+
 .container {
+
+  flex: 1 0 75%;
+  justify-content: space-between;
+  max-height: fit-content;
+  display: flex;
+
+}
+
+.container h2 {
+
+display: flex;
+align-items: center;
+border-right-style: solid;
+border-width: 1px;
+border-color: aqua;
+justify-content: left;
+
+
+
+}
+
+
+/* About Me Section Box Styling End*/
+/* Work Section Styling */
+
+
+.workcontainer {
+
+  flex: 1 0 75%;
+  justify-content: space-between;
+  max-height: fit-content;
+  display: flex;
+
+
+}
+
+.workcontainer h2 {
 
   display: flex;
   align-items: center;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: aqua;
+  justify-content: left;
+  flex-direction: column;
+  width: 100px;
+
 
 }
 
-.container about {
+.projects {
 
-  max width: 60%;
-  display: inline-flex;
-  flex-wrap: wrap;
+  flex: 1 0 75%;
+  justify-content: space-between;
 
 }
-.profile {
-  margin-right: 10px; 
-}
 
-#about h2 {
-  margin-bottom: 0; 
-}
 
-.container {
+
+ .p0 {
+
+  max-width: 75%;
   display: flex;
-  align-items: flex-start; /* Align items to the start */
-}
 
-#projects {
+
+} 
+
+.project-group {
+
   display: flex;
-  flex-wrap: wrap; /* Allow flex items to wrap */
+  flex-direction: row;
+  max-width: 75%;
+
 }
 
-#projects .p0 {
-  flex: 1 1 50%; 
-}
 
-#projects .project-group {
-  flex: 1 1 25%; 
-}
 
 #projects .project-group figure {
-  flex: 1 1 auto; /* Allow the projects to shrink */
-  max-width: calc(75% - 20px); 
-  margin-right: 20px; 
-  margin-bottom: 20px; 
-}
+  
+    flex: 1 1 auto;  
+} 
 
 #projects figure img {
   display: block;
   width: 100%;
   height: auto;
-}
+} 
+
+/* Work Section Styling End */
+/* Contact Styling Start */
 
 .contact-container {
+
+  
+  flex: 1 0 75%;
+  justify-content: space-between;
+  max-height: fit-content;
   display: flex;
-  align-items: start;
+}
+
+.contact-container h2 {
+
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right-style: solid;
+  border-width: 1px;
+  border-color: aqua;
+  clear: both;
+
+  
+
 }
 
 .bottomNav {
+  flex: 1 0 75%;
   display: flex;
   list-style-type: none;
   padding: 0;
   align-items: start;
-}
-
-.bottomNav li {
-  margin-right: 10px; 
 }
 
 
@@ -161,6 +231,22 @@ main {
   font-size: medium;
 }
 
+/* Contact Styling End */
+/* Footer Styling */
+
+.footer {
+
+  font-size: xx-small;
+  padding: 30px;
+    clear: both;
+    text-align: center;
+  
+
+}
+
+
+
+/* Media screen styling */
 
 @media screen and (max-width: 780px) {
   .topNav {
