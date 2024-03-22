@@ -75,20 +75,22 @@ nav a:hover, .topNav a:hover {
   display: flex;
 }
 
-.container h2, .workcontainer h2, .contact-container h2 {
+
+#about h2,
+#work h2,
+#contact-me h2 {
   display: flex;
   align-items: center;
   border-right-style: solid;
   border-width: 1px;
   border-color: aqua;
   justify-content: left;
-  width: 125px;
-  
+  width: 150px;
 }
 
 #projects figure img {    /*created to adjust main work pic*/
   display: block;
-  width: 100%;
+  width: 75%;
   height: auto;
 } 
 
@@ -126,8 +128,56 @@ nav a:hover, .topNav a:hover {
 
 /* Media screen styling */
 @media screen and (max-width: 780px) {
-  .topNav, .container, .projects, .project-group {
+  /* Stack elements on top of each other when screen size is 780px or smaller */
+  header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+  }
+
+  .topNav {
+    margin-top: 20px;
+    text-align: center;
+
+  }
+  .topNav li {
+    margin: 10px 0;
+  }
+  
+  .hero-banner h2 {
+    font-size: 25px; /* Adjusted font size for smaller screens */
+    bottom: 10px; /* Adjusted bottom position */
+  }
+
+  .container,
+  .workcontainer,
+  .projects,
+  .project-group,
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .container h2,
+  .workcontainer h2,
+  .contact-container h2 {
+    width: auto;
+    margin-left: 0;
+    border-right: none;
+  }
+
+  .container img.profile {
+    margin: 20px auto;
+  }
+
+  .project-group {
+    width: 100%;
+  }
+
+  .bottomNav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bottomNav li {
+    margin: 10px 0;
   }
 }
