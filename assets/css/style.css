@@ -54,6 +54,7 @@ nav a:hover, .topNav a:hover {
   height: 190px;
   position: relative;
   min-width: max-content;
+  background-color: aqua;
 }
 
 .hero-banner h2 {
